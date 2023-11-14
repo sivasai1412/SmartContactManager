@@ -1,6 +1,119 @@
-<html lang="en" xmlns="http://www.thymeleaf.org" th:replace="base::layout(~{::h1})">
+<html lang="en" xmlns="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+	<head>
+		<title th:text="${title}"> Signup page </title>	
+	</head>
 	
-	<title th:text="${title}"> Signup page </title>
-	
-	<h1>This is Signup page</h1>
+	<body>
+		<section>
+			<div class="container">
+				
+				<div class="row">
+					
+					
+					<div class="col-md-8 offset-md-2">
+						
+						<!-- Now creating a card for the register page-->
+						
+						<div class="my-card">
+							<h1 class="text-center"> Register Here!</h1>
+							
+							
+							<form action="" th:action="@{/do_register}" method="post">
+								
+								
+								<!-- Name field-->
+								
+								<div class="mb-3">
+									
+									<label for="name_field" class="form-label">Your Name</label>
+									
+									<input 
+									type="text" 
+									class="form-control" 
+									id="name_field" 
+									aria-describedby="emailHelp"
+									placeholder="Enter here"
+									required />
+									
+								
+								</div>
+								
+								<!-- Email field-->
+								
+								<div class="mb-3">
+									
+									<label for="email_field" class="form-label">Your Email</label>
+									
+									<input 
+									type="email" 
+									class="form-control" 
+									id="email_field" 
+									aria-describedby="emailHelp"
+									placeholder="Enter here"
+									required />
+									
+								
+								</div>
+								
+								
+								<!-- Password field-->
+								
+								<div class="mb-3">
+									
+									<label for="password_field" class="form-label">Your Password</label>
+									
+									<input 
+									type="password" 
+									class="form-control" 
+									id="password_field" 
+									aria-describedby="emailHelp"
+									placeholder="Enter here"
+									required />
+									
+								
+								</div>
+								
+								
+								
+								<!-- User about field -->
+								
+								<div class="form-floating mb-3">
+									
+									
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+										style="height: 100px" ></textarea>
+										
+										
+									<label for="floatingTextarea2">Enter Something yourself</label>
+								</div>
+								
+								
+								<!--  Buttons -->
+								
+								<div class="container text-center">
+									
+									<button type="submit" class="btn bg-primary text-white">
+										Submit
+									</button>
+									<button type="reset" class="btn btn-warning">
+										Reset
+									</button>
+									
+								</div>
+								
+								
+								
+								
+							</form>
+							
+						</div>
+						
+					</div>
+					
+					
+				</div>
+				
+			</div>
+		</section>
+	</body>
 </html>
